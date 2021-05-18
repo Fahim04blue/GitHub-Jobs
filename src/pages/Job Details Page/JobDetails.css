@@ -1,0 +1,103 @@
+.job__description {
+  padding: 20px 20px 20px 50px;
+  color: var(--dark-text);
+}
+
+.job__description-header img {
+  height: 122px;
+  width: 200px;
+}
+.job__description-header {
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .job__description-header {
+    display: flex;
+    flex-direction: column;
+  }
+  .job__description-title {
+    margin-top: 20px;
+  }
+}
+.job__description-subtitle,
+.job__description-subtitle2,
+.job__description-subtitle3 {
+  font-size: 14px;
+  color: var(--light-text);
+  margin-top: 5px;
+}
+
+.job__description-title {
+  font-size: 24px;
+  margin-left: 70px;
+}
+.job__description-btn {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.job__description-markdown {
+  font-size: 17px;
+  line-height: 1.6em;
+  margin-top: 20px;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes wink {
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes wink {
+  50% {
+    opacity: 0;
+  }
+}
+.job__description-spinner {
+  width: 112px;
+  height: 100vh;
+  margin: 360px 250px 250px 870px;
+  position: relative;
+}
+.job__description-spinner:before {
+  content: "";
+  display: block;
+  width: 7em;
+  height: 1em;
+  margin: 10px auto;
+  padding: 3em 0;
+  border-radius: 50%;
+  border: 2px solid var(--dark-text);
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  -webkit-animation: rotate 1s ease infinite;
+  animation: rotate 1s ease infinite;
+}
+.job__description-spinner:after {
+  content: "Loading";
+  position: absolute;
+  top: 0;
+  color: var(--dark-text);
+  font: 0.9em sans-serif;
+  width: 8em;
+  line-height: 8em;
+  text-align: center;
+  -webkit-animation: wink 1.4s ease infinite;
+  animation: wink 1.4s ease infinite;
+}
+
+@media screen and (max-width: 768px) {
+  .job__description-spinner {
+    height: 100vh;
+    margin: 120px 48px 48px 150px;
+  }
+}

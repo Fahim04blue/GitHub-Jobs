@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import AllJobsPage from "./pages/All Jobs Page/AllJobsPage";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import JobDetails from "./pages/Job Details Page/JobDetails";
+import Navbar from "./components/Navbar/Navbar";
+import { useEffect } from "react";
+import { keepTheme } from "./utils/theme";
 function App() {
+  useEffect(() => {
+    keepTheme();
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main__container">
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={AllJobsPage} />
+          <Route path="/job/:jobId" component={JobDetails} />
+        </Switch>
+      </Router>
     </div>
   );
 }
