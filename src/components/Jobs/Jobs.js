@@ -7,7 +7,8 @@ import "./Jobs.css";
 import { faClipboard, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 
 const Jobs = () => {
-  const ALL_JOBS_URL = "/positions.json";
+  const ALL_JOBS_URL =
+    "https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json";
   const [loading, setLoading] = useState(true);
   const [jobs, setJobs] = useState([]);
   const [search, setSearch] = useState("");
@@ -15,9 +16,9 @@ const Jobs = () => {
   const [query, setQuery] = useState("");
   const [queryByLocation, setQueryByLocation] = useState("");
 
-  const SEARCH_JOBS_URL = `/positions.json?description=${query}`;
+  const SEARCH_JOBS_URL = `https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?description=${query}`;
 
-  const SEARCH_JOBS_LOCATION_URL = `/positions.json?location=${queryByLocation}`;
+  const SEARCH_JOBS_LOCATION_URL = `https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?location=${queryByLocation}`;
 
   useEffect(() => {
     const searchJobsByDescription = async () => {
