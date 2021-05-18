@@ -3,7 +3,7 @@
 }
 @media screen and (max-width: 768px) {
   .jobs {
-    padding: 20px 20px 20px 30px;
+    padding: 20px 20px 20px 53px;
   }
 }
 
@@ -163,7 +163,7 @@
 }
 @media screen and (max-width: 768px) {
   .pagination {
-    margin-left: 25px;
+    margin-left: 8px;
   }
 }
 
